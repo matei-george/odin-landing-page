@@ -19,6 +19,10 @@ This project taught me a lot. It took way longer than last time, but it was well
 
 Hope you enjoy it still. This was a couple of hours of work, but I'm satisfied with what I've done and I'm excited to go on to the next one.
 
+### Live view
+
+The project can be viewed over here : [Live View](https://matei-george.github.io/odin-landing-page).
+
 ### Special Mentions
 
 Thank you The Odin Team for providing, the project, Freepik for providing the icons and you for watching my project.
