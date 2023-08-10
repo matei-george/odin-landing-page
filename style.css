@@ -22,4 +22,72 @@ body {
    font-family: "Roboto", sans-serif;
    background-color: var(--dark-blue-background);
    font-size: 18px;
+   color: var(--main-text);
+   height: 100vh;
+   width: 100vw;
+}
+/* Setting up section colors */
+.top-mid-section,
+.bottom-mid-section {
+   background-color: var(--main-text);
+   color: var(--dark-blue-background);
+}
+.center-mid-section {
+   background-color: var(--quote-background);
+   color: var(--quote-text);
+}
+
+/* Styling the webpage */
+
+/* --|The top section|-- */
+.top-content {
+   display: flex;
+   flex-flow: column nowrap;
+}
+
+/* navigation */
+.navigation {
+   display: flex;
+   justify-content: space-between;
+}
+.website-logo {
+   font-size: 24px;
+   font-weight: 700;
+}
+.navigation-links {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   gap: 25px;
+}
+/* TODO -> LVHA change colors and add transitions */
+.navigation-links li a:link,
+.navigation-links li a:visited,
+.navigation-links li a:hover,
+.navigation-links li a:active {
+   text-decoration: none;
+   color: var(--secondary-text);
+}
+.webpage-title {
+   display: flex;
+   justify-content: space-between;
+}
+.website-title {
+   font-size: 48px;
+}
+.left-title p {
+   color: var(--secondary-text);
+}
+.sign-up {
+   width: 100px;
+   height: 40px;
+   border: none;
+   border-radius: 8px;
+   color: var(--main-text);
+   background-color: var(--button);
+   font-size: 18px;
+   font-weight: 700;
+}
+.webpage-title img {
+   width: 500px;
 }
