@@ -17,13 +17,14 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   user-select: none;
 }
 body {
    font-family: "Roboto", sans-serif;
    background-color: var(--dark-blue-background);
    font-size: 18px;
    color: var(--main-text);
-   width: 100vw;
+   width: 100%;
    height: 100vh;
 }
 /* Setting the flex */
@@ -83,6 +84,7 @@ body {
 .website-logo__image {
    width: 50px;
    border-radius: 5px;
+   filter: invert();
 }
 .navigation-links {
    list-style: none;
@@ -90,14 +92,18 @@ body {
    align-items: center;
    gap: 25px;
 }
-/* TODO -> LVHA change colors and add transitions */
+
 .navigation-links li a:link,
 .navigation-links li a:visited,
 .navigation-links li a:hover,
 .navigation-links li a:active {
+   padding: 4px 16px;
    text-decoration: none;
    color: var(--secondary-text);
+   border-radius: 5px;
+   transition: all 500ms;
 }
+
 .webpage-title {
    display: flex;
    justify-content: space-between;
@@ -124,6 +130,7 @@ body {
    background-color: var(--button);
    font-size: 18px;
    font-weight: 700;
+   transition: all 500ms;
 }
 .webpage-title img {
    width: 600px;
@@ -143,13 +150,16 @@ body {
 }
 .gallery {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
 }
 .gallery-item {
    display: flex;
    flex-flow: column wrap;
    align-items: center;
    flex: 0 0 75px;
+}
+.gallery-item:hover {
+   filter: blur(0);
 }
 .gallery-item__image {
    width: 200px;
@@ -173,7 +183,7 @@ body {
 .center-mid-content {
    display: flex;
    flex-flow: column nowrap;
-   align-items: flex-end;
+   align-items: center;
    gap: 16px;
 }
 
@@ -216,14 +226,32 @@ body {
 .main-footer {
    padding: 32px 0;
    display: flex;
+   flex-flow: column nowrap;
    justify-content: center;
    align-items: center;
-   text-align: center;
+}
+
+.main-footer a:link,
+.main-footer a:visited,
+.main-footer a:active {
+   padding: 4px 8px;
+   text-decoration: none;
+   background-color: var(--dark-blue-background);
+   color: var(--dark-blue-background);
+   border-radius: 5px;
+}
+.main-footer a:hover {
+   color: var(--dark-blue-background);
+   background-color: var(--secondary-text);
+   transition: all 300ms;
 }
 
 /* Button states */
 button:hover {
    cursor: pointer;
+   background-color: var(--main-text);
+   color: var(--button);
+   transition: all 500ms;
 }
 
 /* Section padding */
@@ -232,4 +260,11 @@ button:hover {
 .center-mid-content,
 .bottom-mid-content {
    padding: 100px 0;
+}
+
+/* Nav links states */
+.navigation-links li a:hover {
+   background-color: var(--secondary-text);
+   color: var(--information-header);
+   transition: all 300ms;
 }
